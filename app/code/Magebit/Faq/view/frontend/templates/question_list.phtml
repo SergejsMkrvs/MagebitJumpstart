@@ -1,0 +1,24 @@
+<?php /** @var \Magebit\Faq\Block\QuestionList $block */ ?>
+<!--
+/**
+ * @copyright Copyright (c) 2024 Magebit, Ltd. (https://magebit.com/)
+ * @author    Magebit
+ * @license   MIT
+ */
+-->
+<h1>Frequently Asked Questions</h1>
+<div class="faq-container">
+    <ul class="faq-list">
+        <?php foreach ($block->getQuestions() as $question): ?>
+            <li class="faq-item">
+                <input type="checkbox" id="q-<?php echo $question->getId(); ?>" class="faq-toggle">
+                <label class="faq-question" for="q-<?php echo $question->getId(); ?>">
+                    <?php echo $question->getQuestion(); ?>
+                </label>
+                <div class="faq-answer">
+                    <?php echo $question->getAnswer(); ?>
+                </div>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
