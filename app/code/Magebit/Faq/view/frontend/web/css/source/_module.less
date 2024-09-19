@@ -1,0 +1,47 @@
+.columns .column.main {
+    width: 100% !important;
+}
+
+.faq-container {
+    padding: 20px;
+}
+
+.faq-list {
+    list-style: none;
+    padding: 0;
+}
+
+.faq-item {
+    position: relative;
+}
+
+li.faq-item {
+    margin: 0;
+}
+
+.faq-toggle {
+    display: none;
+}
+
+.faq-question {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+.faq-question:hover {
+    background-color: #e5e5e5;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.faq-toggle:checked + .faq-question + .faq-answer {
+    max-height: 1000px;
+    padding: 10px;
+}
